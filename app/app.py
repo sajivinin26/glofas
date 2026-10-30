@@ -8,7 +8,7 @@ st.set_page_config(page_title="Flood-onset early warning", page_icon="🌊", lay
 
 @st.cache_resource
 def load():
-    b = joblib.load(ROOT / "models" / "blend_model.joblib")
+    b = joblib.load(ROOT / "models" / "best_model.joblib")
     res = json.load(open(ROOT / "outputs" / "results.json"))
     df = pd.read_csv(ROOT / "data" / "onset_table.csv", parse_dates=["date"])
     for a, c in (("q_lag1","lag1_over_thr"),("q_lag2","lag2_over_thr"),("q_lag3","lag3_over_thr"),("q_lag7","lag7_over_thr"),
