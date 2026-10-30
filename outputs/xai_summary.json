@@ -1,0 +1,15 @@
+{
+  "top_shap": {
+    "Flow today / high-flow level": 0.7237,
+    "Flow today / 30-day mean": 0.5377,
+    "1-day relative rise": 0.4393,
+    "7-day mean flow / level": 0.2949,
+    "30-day mean flow / level": 0.2926
+  },
+  "spearman_shap_ebm": 0.13636363636363638,
+  "local_case": {
+    "point": "P28",
+    "date": "2026-10-09",
+    "p": 0.9549656837406842
+  }
+}

@@ -1,0 +1,7 @@
+raw/
+__pycache__/
+.ipynb_checkpoints/
+.agents/
+.claude/
+models/Gaussian_Process_Classifier.joblib
+models/Random_Forest.joblib

@@ -1,0 +1,132 @@
+{
+  "weight_lightgbm": 0.4,
+  "features": [
+    "q_over_thr",
+    "lag1_over_thr",
+    "lag2_over_thr",
+    "lag3_over_thr",
+    "lag7_over_thr",
+    "mean7_over_thr",
+    "mean30_over_thr",
+    "max7_over_thr",
+    "rise_1d",
+    "rise_3d",
+    "q_over_mean30"
+  ],
+  "test_days": 9536,
+  "test_onsets": 100,
+  "never_alert_accuracy": 0.989513422818792,
+  "results": {
+    "Logistic Regression": {
+      "valid": {
+        "accuracy": 0.969124517570587,
+        "balanced_accuracy": 0.6888783868935098,
+        "precision": 0.5431034482758621,
+        "recall": 0.3888888888888889,
+        "f1": 0.45323741007194246,
+        "pr_auc": 0.4182523624356705,
+        "roc_auc": 0.8973151195023351,
+        "mcc": 0.4442759487791693,
+        "tp": 63,
+        "fp": 53,
+        "fn": 99,
+        "tn": 4708
+      },
+      "test": {
+        "accuracy": 0.984375,
+        "balanced_accuracy": 0.6656019499788046,
+        "precision": 0.2905982905982906,
+        "recall": 0.34,
+        "f1": 0.31336405529953915,
+        "pr_auc": 0.2413147949568076,
+        "roc_auc": 0.8908149639677829,
+        "mcc": 0.30647431200809694,
+        "tp": 34,
+        "fp": 83,
+        "fn": 66,
+        "tn": 9353
+      }
+    },
+    "LightGBM": {
+      "valid": {
+        "accuracy": 0.9638431850497664,
+        "balanced_accuracy": 0.730868865084366,
+        "precision": 0.45348837209302323,
+        "recall": 0.48148148148148145,
+        "f1": 0.46706586826347307,
+        "pr_auc": 0.4118812779096906,
+        "roc_auc": 0.8710705033956451,
+        "mcc": 0.44858549134340375,
+        "tp": 78,
+        "fp": 94,
+        "fn": 84,
+        "tn": 4667
+      },
+      "test": {
+        "accuracy": 0.9629823825503355,
+        "balanced_accuracy": 0.7487855023314964,
+        "precision": 0.14763231197771587,
+        "recall": 0.53,
+        "f1": 0.23093681917211328,
+        "pr_auc": 0.28309389617607955,
+        "roc_auc": 0.8993111487918609,
+        "mcc": 0.266287904699589,
+        "tp": 53,
+        "fp": 306,
+        "fn": 47,
+        "tn": 9130
+      }
+    },
+    "Blend (LightGBM + Logistic)": {
+      "valid": {
+        "accuracy": 0.9664838513101767,
+        "balanced_accuracy": 0.7262713248850614,
+        "precision": 0.49032258064516127,
+        "recall": 0.4691358024691358,
+        "f1": 0.4794952681388013,
+        "pr_auc": 0.4512791599094679,
+        "roc_auc": 0.9008922806444335,
+        "mcc": 0.46230877949371596,
+        "tp": 76,
+        "fp": 79,
+        "fn": 86,
+        "tn": 4682
+      },
+      "test": {
+        "accuracy": 0.9751468120805369,
+        "balanced_accuracy": 0.7153560830860534,
+        "precision": 0.19823788546255505,
+        "recall": 0.45,
+        "f1": 0.27522935779816515,
+        "pr_auc": 0.2820770634176152,
+        "roc_auc": 0.905068885120814,
+        "mcc": 0.28781714550671134,
+        "tp": 45,
+        "fp": 182,
+        "fn": 55,
+        "tn": 9254
+      }
+    }
+  },
+  "lr_params": {
+    "C": 10
+  },
+  "lgbm_params": {
+    "n_estimators": 150,
+    "learning_rate": 0.03,
+    "num_leaves": 8,
+    "min_child_samples": 30
+  },
+  "thresholds": {
+    "Logistic Regression": 0.8888138147409339,
+    "LightGBM": 0.696129500821252,
+    "Blend (LightGBM + Logistic)": 0.7688090376896999
+  },
+  "shap_top5": {
+    "Flow today / high-flow level": 0.7237,
+    "Flow today / 30-day mean": 0.5377,
+    "1-day relative rise": 0.4393,
+    "7-day mean / level": 0.2949,
+    "30-day mean / level": 0.2926
+  }
+}

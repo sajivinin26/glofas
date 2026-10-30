@@ -1,0 +1,7 @@
+,,accuracy,balanced_accuracy,precision,recall,f1,pr_auc,roc_auc,mcc,Never alert (reference)
+valid,Logistic Regression,0.969,0.689,0.543,0.389,0.453,0.418,0.897,0.444,
+valid,LightGBM,0.964,0.731,0.453,0.481,0.467,0.412,0.871,0.449,
+valid,Blend (LightGBM + Logistic),0.966,0.726,0.49,0.469,0.479,0.451,0.901,0.462,
+test,Logistic Regression,0.984,0.666,0.291,0.34,0.313,0.241,0.891,0.306,
+test,LightGBM,0.963,0.749,0.148,0.53,0.231,0.283,0.899,0.266,
+test,Blend (LightGBM + Logistic),0.975,0.715,0.198,0.45,0.275,0.282,0.905,0.288,
